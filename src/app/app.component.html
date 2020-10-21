@@ -1,0 +1,30 @@
+<div class="content" style="padding-bottom: 5vh">
+
+
+  <div class="grid-container">
+    <div class="mainArea" [@flyInOut]="inOut ? 'in' : 'out'">
+      <svg width="392" height="234" xmlns="http://www.w3.org/2000/svg" class="svgActive" (mouseover)="switchCurrent($event)">
+        <path id="Land1" class="land" d="m9.41251,150.94396l74.49999,-144.99998l74.5,144.99998l-148.99999,0z" stroke-width="6" stroke="#000" fill="#fff"/>
+        <rect id="land2" class="land" height="130" width="137" y="23.45313" x="246.5" fill-opacity="null" stroke-opacity="null" stroke-width="6" stroke="#000" fill="#fff"/>
+        <rect id="land3" class="land" height="56" width="141" y="172.45313" x="245.5" fill-opacity="null" stroke-opacity="null" stroke-width="6" stroke="#000" fill="#fff"/>
+        <rect id="land4" class="land" height="203" width="60" y="25.45313" x="171.5" fill-opacity="null" stroke-opacity="null" stroke-width="6" stroke="#000" fill="#fff"/>
+        <rect id="land5" class="land" height="65" width="155" y="163.45313" x="4.5" fill-opacity="null" stroke-opacity="null" stroke-width="6" stroke="#000" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="prevArea">
+      <p id="phantomElement"></p>
+    </div>
+    <div class="detailsText" *ngIf="currentElem" [@fadeInOut]="inOut ? 'in' : 'out'">
+      <h2 id="svgTitle">{{currentElem.id}}</h2>
+      <h3>{{currentElem.tagName}}</h3>
+    </div>
+    <div class="detailsPicture" *ngIf="currentElem">
+      <svg id="detailsSvg" width="160" height="160" xmlns="http://www.w3.org/2000/svg" [innerHTML]="currentInner" [attr.viewBox]="getViewBox()">
+
+      </svg>
+      <button color="primary" mat-raised-button (click)="inOut = !inOut">Toggle SVG</button>
+
+    </div>
+  </div>
+
+</div>

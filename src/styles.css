@@ -1,0 +1,285 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+  --cyan: hsl(171, 66%, 44%);
+  --lightblue: hsl(233, 100%, 69%);
+  --dk-grey-blue: hsl(210, 10%, 33%);
+  --grey-blue: hsl(201, 11%, 66%);
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #231f20;
+}
+
+.content {
+  background-image: url("https://github.com/hammercait/clipboard-landing-page/blob/master/images/bg-header-desktop.png?raw=true");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+}
+
+.svgActive {
+
+}
+
+.section1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  margin-top: -100px;
+}
+
+.logo {
+  width: 125px;
+  height: 125px;
+  background-repeat: no-repeat;
+  background-size: 105px;
+}
+
+.section1 h1 {
+  color: var(--dk-grey-blue);
+  margin-bottom: 5px;
+}
+
+.section1 p {
+  margin-top: 10px;
+  color: var(--grey-blue);
+  font-size: .9em;
+}
+
+.os-buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  position: relative;
+  margin-top: -100px;
+}
+
+footer > img {
+  margin-top: -25px;
+}
+
+footer > .icons {
+  margin-right: 16px;
+}
+
+.content {
+  padding-top: 4.25em;
+  min-height: calc(100vh);
+}
+
+@media screen and (max-width: 980px) {
+  .content {
+    padding-top: 44px;
+  }
+}
+
+.brighter {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#headerLogo {
+  width: 7.5em;
+  background-size: 7em;
+  transition: all .2s ease-in-out;
+  z-index: 20;
+}
+
+#headerLogo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.logo-grey {
+
+  width: 550px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: 550px;
+  fill: #333;
+
+}
+
+/*Nav Menu
+ */
+.topnav {
+  overflow: hidden;
+  background-color: #231f20;
+  margin-left: 10em;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all .2s ease-in-out;
+}
+
+.topnav a:hover {
+  transform: scale(1.05);
+  text-decoration: underline !important;
+}
+
+.topnav a.active {
+  background: rgba(207, 23, 136, 0.5);
+}
+
+.topnav .ToggleNav {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.ToggleNav {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .topnav {
+    margin-left: 8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .topnav.responsive .ToggleNav {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+}
+
+footer {
+  overflow: hidden;
+  margin-bottom: -20px;
+}
+
+.primBorderTop {
+  border-top: 4px solid #ff009d;
+  box-shadow: 0 -1px 8px 1px hsl(210, 10%, 33%);
+}
+
+.primBorderBottom {
+  box-shadow: 0 1px 8px 1px hsl(212, 10%, 33%);
+  border-bottom: 4px solid #ff009d;
+}
+
+.innerContent {
+  text-align: start;
+  padding: 7em 0 14em 0;
+  margin: auto auto auto 4em;
+}
+
+.notFullWidth {
+  width: 80%;
+  height: 80%;
+}
+
+.grid-container {
+  margin-bottom: 150px;
+  display: grid;
+  grid-template-columns: 1.0fr 3fr 1.5fr;
+  grid-template-rows: 1.5fr 0.5fr 6fr;
+  gap: 8px 8px;
+  grid-template-areas: ". . ." "prevArea mainText detailsText" "prevArea mainArea detailsPicture";
+}
+
+.mainText {
+  grid-area: mainText;
+}
+
+.mainArea {
+  grid-area: mainArea;
+}
+
+.detailsText {
+  grid-area: detailsText;
+}
+
+.detailsPicture {
+  grid-area: detailsPicture;
+  display: flex;
+  flex-direction: column;
+}
+
+.prevArea {
+  grid-area: prevArea;
+}
+
+/* MAP STYLES */
+
+.land {
+  fill: #b9b9b9;
+  stroke: white;
+  stroke-width: 1.5;
+  stroke-miterlimit: 4;
+}
+
+.coast {
+  stroke-width: 0.5;
+}
+
+.circle {
+  opacity: 0;
+  fill-opacity: 1;
+  stroke: black;
+  stroke-width: 0.5;
+  stroke-opacity: 1;
+}
+
+.svgActive > .land:hover {
+  opacity: 0.5;
+}
+
+.svgPrev:hover {
+  opacity: .85;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
